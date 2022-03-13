@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticGlobalData:MonoBehaviour
+public class GlobalSolarData:MonoBehaviour
 {
     [System.Serializable]
     public struct Float2
@@ -18,7 +18,7 @@ public class StaticGlobalData:MonoBehaviour
         }
     }
     
-    public  static  StaticGlobalData Inst;
+    public  static  GlobalSolarData Inst;
     public Vector3[] allSolarPos;
 
     private void Awake()

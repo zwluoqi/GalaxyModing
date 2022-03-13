@@ -39,7 +39,7 @@ public class GalaxyModing : MonoBehaviour
     		int solarCount = numberOfSolars;
     		List<Vector3> allOrgPos = new List<Vector3>();
     		List<GameObject> allOrgGo = new List<GameObject>();
-    		var list = StaticGlobalData.Inst.GetSolarPos();
+    		var list = GlobalSolarData.Inst.GetSolarPos();
     
     		if (list == null)
             {
@@ -113,7 +113,7 @@ public class GalaxyModing : MonoBehaviour
     			}
     		}
     
-    		StaticGlobalData.Inst.UpdateSolarPos(allOrgPos);
+            GlobalSolarData.Inst.UpdateSolarPos(allOrgPos);
     		yield return null;
             ShowText("生成恒星数据");
     		yield return null;
@@ -251,7 +251,7 @@ public class GalaxyModing : MonoBehaviour
             galaxyStar.color = Color.white;
             galaxyStar.starSize = 0.4f;
             galaxyStar.startSizeRange = 0.8f;
-    		galaxyStar.Init(StaticGlobalData.Inst.allSolarPos);
+    		galaxyStar.Init(GlobalSolarData.Inst.allSolarPos);
     		loop = true;
     		while (Camera.main.orthographicSize > 20)
     		{
