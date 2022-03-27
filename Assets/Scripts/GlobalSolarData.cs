@@ -33,11 +33,15 @@ public class GlobalSolarData:MonoBehaviour
                 allSolarPos[i] = new Vector3(tmp[i].x,tmp[i].y,0);
             }
         }
+        else
+        {
+            allSolarPos = null;
+        }
     }
 
     public Vector3[] GetSolarPos()
     {
-        return allSolarPos;
+        return null;
     }
 
     public void UpdateSolarPos(List<Vector3> list)
